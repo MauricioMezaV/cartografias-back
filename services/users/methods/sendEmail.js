@@ -7,15 +7,15 @@ const sendEmail = async (datos) => {
 		host: "smtp.gmail.com",
 		port: 587,
 		auth: {
-			user: "noreply.hpcuoh@gmail.com",
-			pass: "mnouqzqprqqjxhfs"
+			user: "mauriciomv.cdp@gmail.com",
+			pass: "exefidwaeosppnwi"
 		}
 	});
 
 	// Información del email
 
 	const info = await transport.sendMail({
-		from: '"HPC - Administrador"',
+		from: '"Cartografías - Administrador"',
 		to: email,
 		subject: "HPC",
 		text: "Comprueba tu cuenta en UpTask",
