@@ -14,7 +14,7 @@ const contactSendEmail = async (datos) => {
 
 	const info = await transport.sendMail({
 		from: '"Cartografías - Contacto"',
-		to: 'mauricio.meza@pregrado.uoh.cl',
+		to: 'rodrigo.llancao@pregrado.uoh.cl',
 		subject: 'Has recibido un nuevo formulario desde el contacto Cartografías',
 		text: 'Comprueba tu cuenta en UpTask',
         html: `<head>
