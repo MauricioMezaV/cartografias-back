@@ -51,19 +51,19 @@ module.exports = {
 					"v1.users.newPassword",
 					"v1.users.Contact",
 
-					//NEWS
-					"v1.news.list",
-					"v1.news.create",
-					"v1.news.get",
-					"v1.news.update",
-					"v1.news.remove",
+					//MEMORIALS
+					"v1.memorials.list",
+					"v1.memorials.create",
+					"v1.memorials.get",
+					"v1.memorials.update",
+					"v1.memorials.remove",
 
-					//PAPERS
-					"v1.papers.list",
-					"v1.papers.create",
-					"v1.papers.get",
-					"v1.papers.update",
-					"v1.papers.remove",
+					//PLACES
+					"v1.places.list",
+					"v1.places.create",
+					"v1.places.get",
+					"v1.places.update",
+					"v1.places.remove",
 
 					// GREETER
 					"v1.greeter.hello",
@@ -90,13 +90,13 @@ module.exports = {
 					"POST /users/newPassword/:token": "v1.users.newPassword",
 					"POST /users/Contact": "v1.users.Contact",
           
-					//NEWS
-					"POST /news" : "v1.news.create",
-					"REST /news": "v1.news",
+					//MEMORIALS
+					"POST /memorials" : "v1.memorials.create",
+					"REST /memorials": "v1.memorials",
 
-					//PAPERS
-					"POST /papers" : "v1.papers.create",
-					"REST /papers": "v1.papers",					
+					//PLACES
+					"POST /places" : "v1.places.create",
+					"REST /places": "v1.places",					
           
 					// GREETER
 					"GET /greeter/hello": "v1.greeter.hello",

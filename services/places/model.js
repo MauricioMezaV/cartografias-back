@@ -5,11 +5,13 @@ const schema = new mongoose.Schema({
         type: String,
         required: true
     },
-    description: {
-        type: String,
-        required: true
-    },
-    author: {
+    authors: [
+        {
+            name: {type: String, 
+                required: true}
+        }
+    ],
+    abstract: {
         type: String,
         required: true
     },
@@ -17,20 +19,14 @@ const schema = new mongoose.Schema({
         type: Date,
         required: true
     },
-    image: {
-        src: {
-            type: String,
-            required: true
-        },
-        title: {
-            type: String,
-            required: true
-        }
+    publicationLink: {
+        type: String,
+        required: true
     },
 }, {
     timestamps: true
 })
 
-const model = mongoose.model("news", schema)
+const model = mongoose.model("places", schema)
 
 module.exports = model

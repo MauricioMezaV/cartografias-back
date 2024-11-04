@@ -9,7 +9,7 @@ const settings = require("./settings")
 const model = require("./model")
 
 module.exports = {
-	name: "news",
+	name: "places",
 	version: 1,
 
 	mixins: [ DbService ],
