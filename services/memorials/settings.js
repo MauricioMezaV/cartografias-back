@@ -3,10 +3,13 @@ module.exports = {
 	 * Public fields
 	 */
 	fields: [
-		"_id",               
-		"type",            
-		"properties",      
-		"geometry"         
+		"_id",
+		"message",
+		"abstract",
+		"tipo",
+		"comuna",
+		"provincia",
+		"coordinates"
 	],
 
 	/*
@@ -18,57 +21,34 @@ module.exports = {
 			required: true,
 			unique: true
 		},
-		type: {
+		message: {
 			type: "string",
-			enum: ["Feature"],
-			default: "Feature"
+			required: true
 		},
-		properties: {
-			message: {
-				type: "string",
-				required: true
-			},
-			abstract: {
-				type: "string",
-				required: true
-			},
-			imageId: {
-				type: "number",
-				required: true
-			},
-			iconSize: {
-				type: "array",
-				items: {
-					type: "number"
-				},
-				required: true
-			},
-			comuna: {
-				type: "string",
-				required: true
-			},
-			provincia: {
-				type: "string",
-				required: true
-			},
-			tipo: {
-				type: "string",
-				required: true
-			}
+		abstract: {
+			type: "string",
+			required: true
 		},
-		geometry: {
-			type: {
-				type: "string",
-				enum: ["Point"],
-				default: "Point"
+		tipo: {
+			type: "string",
+			required: true
+		},
+		comuna: {
+			type: "string",
+			required: true
+		},
+		provincia: {
+			type: "string",
+			required: true
+		},
+		coordinates: {
+			type: "array",
+			items: {
+				type: "number"
 			},
-			coordinates: {
-				type: "array",
-				items: {
-					type: "number"
-				},
-				required: true
-			}
+			minItems: 2,
+			maxItems: 2,
+			required: true
 		}
 	}
-}
+};
