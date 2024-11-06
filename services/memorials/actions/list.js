@@ -4,7 +4,7 @@ module.exports = {
     try {
       const { params } = context.params;
 
-      const memorials = await Memorial.find(params); 
+      const memorials = await this.adapter.find(params); 
 
       console.log(memorials);
 
