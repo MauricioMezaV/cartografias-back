@@ -5,7 +5,7 @@ services:
   api:
     build:
       context: .
-    image: hpc-backend
+    image: cartografias-backend
     env_file: docker-compose.env
     environment:
       SERVICES: api

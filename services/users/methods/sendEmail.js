@@ -17,7 +17,7 @@ const sendEmail = async (datos) => {
 	const info = await transport.sendMail({
 		from: '"Cartografías - Administrador"',
 		to: email,
-		subject: "HPC",
+		subject: "Cartografias",
 		text: "Comprueba tu cuenta en UpTask",
 		html: `<head>
 			<meta charset="UTF-8">
