@@ -1,11 +1,8 @@
-const Memorial = require('../models/memorialsSchema');
-
 module.exports = {
   params: {},
-
   async handler(context) {
     try {
-      const { params } = context.meta;
+      const { params } = context.params;
 
       const memorials = await Memorial.find(params); 
 
