@@ -20,6 +20,6 @@ const memorialsSchema = new mongoose.Schema({
 });
 
 
-const Memorials = mongoose.model('Monumento', memorialsSchema);
+const Memorials = mongoose.model('Memorial', memorialsSchema);
 
 module.exports = Memorials;
