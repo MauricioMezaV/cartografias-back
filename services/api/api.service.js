@@ -93,6 +93,7 @@ module.exports = {
 					//MEMORIALS
 					"POST /memorials" : "v1.memorials.create",
 					"REST /memorials": "v1.memorials",
+					"GET /memorials": "v1.memorials.list",
 
 					//PLACES
 					"POST /places" : "v1.places.create",

@@ -8,6 +8,9 @@ const MongooseAdapter = require("moleculer-db-adapter-mongoose")
 const settings = require("./settings")
 const model = require("./model")
 
+// Actions
+const list = require("./actions/list")
+
 module.exports = {
 	name: "memorials",
 	version: 1,
@@ -33,6 +36,12 @@ module.exports = {
 	dependencies: [],
 
 	hooks: {},
+	/**
+	 * Actions
+	 */
+	actions: {
+		list,
+	},
 
 	/**
 	 * Events
