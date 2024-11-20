@@ -3,7 +3,6 @@ module.exports = {
 	 * Public fields
 	 */
 	fields: [
-		"_id",
 		"message",
 		"abstract",
 		"tipo",

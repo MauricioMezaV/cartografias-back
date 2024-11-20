@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 
 
 const memorialsSchema = new mongoose.Schema({
+    _id: { type: Schema.Types.ObjectId, required: true },
     message: { type: String, required: true },
     abstract: { type: String, required: true },
     tipo: { type: String, required: true },
