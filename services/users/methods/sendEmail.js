@@ -1,4 +1,4 @@
-const nodemailer = require('nodemailer');
+const nodemailer = require("nodemailer");
 
 const sendEmail = async (datos) => {
 	const { email, nombre, token } = datos;
@@ -8,8 +8,8 @@ const sendEmail = async (datos) => {
 		port: 587,
 		auth: {
 			user: "mauriciomv.cdp@gmail.com",
-			pass: "exefidwaeosppnwi"
-		}
+			pass: "exefidwaeosppnwi",
+		},
 	});
 
 	// Información del email
@@ -31,7 +31,7 @@ const sendEmail = async (datos) => {
 				<p style="color: #555;">Sigue el siguiente enlace para generar una nueva contraseña:</p>
 				<a href="https://hpc-uoh.vercel.app/nueva-contrasena/${token}" style="display: inline-block; padding: 10px 20px; background-color: #007BFF; color: #fff; text-decoration: none; border-radius: 5px; margin-top: 20px;">Restablecer Contraseña</a>
 			</div>
-		</body>`
+		</body>`,
 	});
 };
 

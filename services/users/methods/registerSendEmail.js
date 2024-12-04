@@ -1,4 +1,4 @@
-const nodemailer = require('nodemailer');
+const nodemailer = require("nodemailer");
 
 const registerSendEmail = async (datos) => {
 	const { email, nombre, token } = datos;
@@ -8,8 +8,8 @@ const registerSendEmail = async (datos) => {
 		port: 587,
 		auth: {
 			user: "mauriciomv.cdp@gmail.com",
-			pass: "exefidwaeosppnwi"
-		}
+			pass: "exefidwaeosppnwi",
+		},
 	});
 
 	const info = await transport.sendMail({
@@ -29,7 +29,7 @@ const registerSendEmail = async (datos) => {
 				<p style="color: #555;">Para activar tu cuenta, haz clic en el siguiente botón:</p>
 				<a href="https://hpc-uoh.vercel.app/confirmar-cuenta/${token}" style="display: inline-block; padding: 10px 20px; background-color: #007BFF; color: #fff; text-decoration: none; border-radius: 5px; margin-top: 20px;">Confirmar cuenta</a>
 			</div>
-		</body>`
+		</body>`,
 	});
 };
 

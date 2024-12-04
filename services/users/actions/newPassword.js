@@ -1,8 +1,6 @@
 const bcrypt = require("bcrypt");
 module.exports = {
-	params: {
-
-	},
+	params: {},
 	async handler(context) {
 		const { params } = context;
 		const { password, token } = params;
@@ -23,5 +21,5 @@ module.exports = {
 		} else {
 			return Promise.reject("El token no es válido");
 		}
-	}
-}
+	},
+};

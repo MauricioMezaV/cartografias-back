@@ -6,7 +6,7 @@ module.exports = {
 		try {
 			let { name, email, password } = context.params;
 
-			console.log(context.params)
+			console.log(context.params);
 
 			if (!email) {
 				return Promise.reject("El email es obligatorio");
@@ -29,7 +29,9 @@ module.exports = {
 			}
 
 			if (password.length < 8) {
-				return Promise.reject("La contraseña debe tener más de 8 caracteres");
+				return Promise.reject(
+					"La contraseña debe tener más de 8 caracteres",
+				);
 			}
 
 			password = await bcrypt.hash(password, 10);
@@ -37,13 +39,13 @@ module.exports = {
 			user = {
 				name,
 				email,
-				password
-			}
+				password,
+			};
 
 			await this.adapter.updateById(user._id, user);
 		} catch (error) {
-			console.log('error', error);
+			console.log("error", error);
 			return Promise.reject(error);
 		}
-	}
+	},
 };

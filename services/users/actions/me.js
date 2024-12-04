@@ -7,8 +7,8 @@ module.exports = {
 			console.log(users);
 			return Promise.resolve(users);
 		} catch (error) {
-			console.log('error', error);
+			console.log("error", error);
 			return Promise.reject(error);
 		}
-	}
-}
+	},
+};

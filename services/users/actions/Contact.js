@@ -1,21 +1,21 @@
-const contactSendEmail = require("../methods/contactSendEmail")
+const contactSendEmail = require("../methods/contactSendEmail");
 
 module.exports = {
-    params: {},
-    async handler(context) {
-        let { name, email, message } = context.params;
+	params: {},
+	async handler(context) {
+		let { name, email, message } = context.params;
 
-        email = email.toLowerCase();
+		email = email.toLowerCase();
 
-		try{
+		try {
 			contactSendEmail({
 				name: name,
 				email: email,
-				message: message
-			})
+				message: message,
+			});
 			return Promise.resolve("El formulario se ha enviado exitosamente.");
 		} catch (e) {
-			console.log(e)
+			console.log(e);
 		}
-    }
-}
+	},
+};
