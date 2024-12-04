@@ -1,4 +1,4 @@
-const nodemailer = require('nodemailer');
+const nodemailer = require("nodemailer");
 
 const contactSendEmail = async (datos) => {
 	const { email, name, message } = datos;
@@ -8,16 +8,17 @@ const contactSendEmail = async (datos) => {
 		port: 587,
 		auth: {
 			user: "mauriciomv.cdp@gmail.com",
-			pass: "exefidwaeosppnwi"
-		}
+			pass: "exefidwaeosppnwi",
+		},
 	});
 
 	const info = await transport.sendMail({
 		from: '"Cartografías - Contacto"',
-		to: 'rodrigo.llancao@pregrado.uoh.cl',
-		subject: 'Has recibido un nuevo formulario desde el contacto Cartografías',
-		text: 'Comprueba tu cuenta en UpTask',
-        html: `<head>
+		to: "rodrigo.llancao@pregrado.uoh.cl",
+		subject:
+			"Has recibido un nuevo formulario desde el contacto Cartografías",
+		text: "Comprueba tu cuenta en UpTask",
+		html: `<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Mensaje de Contacto Cartografías O'Higgins</title>
@@ -32,8 +33,8 @@ const contactSendEmail = async (datos) => {
 				<p style="color: #555;">${message}</p>
 			</div>
 		</div>
-	</body>`
-    });
+	</body>`,
+	});
 };
 
 module.exports = contactSendEmail;

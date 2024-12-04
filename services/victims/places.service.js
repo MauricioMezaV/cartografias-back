@@ -7,26 +7,14 @@ const MongooseAdapter = require("moleculer-db-adapter-mongoose");
 const settings = require("./settings");
 const model = require("./model");
 
-// Actions
+//Actions
 const create = require("./actions/create");
-const forgotPassword = require("./actions/forgotPassword");
-const login = require("./actions/login");
-const confirmAccount = require("./actions/confirmAccount");
-const me = require("./actions/me");
-const newPassword = require("./actions/newPassword");
-const Contact = require("./actions/Contact");
 const update = require("./actions/update");
-
-// Methods
-const generateId = require("./methods/generateId");
-const generateJWT = require("./methods/generateJWT");
-const sendEmail = require("./methods/sendEmail");
-const registerSendEmail = require("./methods/registerSendEmail");
-const checkAuth = require("./methods/checkAuth");
-const contactSendEmail = require("./methods/contactSendEmail");
+const get = require("./actions/get");
+const list = require("./actions/list");
 
 module.exports = {
-	name: "users",
+	name: "victims",
 	version: 1,
 
 	mixins: [DbService],
@@ -52,37 +40,22 @@ module.exports = {
 	 */
 	dependencies: [],
 
-	hooks: {},
 	/**
 	 * Actions
 	 */
 	actions: {
+		list,
 		create,
-		forgotPassword,
-		login,
-		confirmAccount,
-		me,
-		newPassword,
-		Contact,
+		get,
 		update,
 	},
+
+	hooks: {},
 
 	/**
 	 * Events
 	 */
 	events: {},
-
-	/**
-	 * Service private methods
-	 */
-	methods: {
-		generateId,
-		generateJWT,
-		sendEmail,
-		registerSendEmail,
-		checkAuth,
-		contactSendEmail,
-	},
 
 	/**
 	 * Service created lifecycle event handler

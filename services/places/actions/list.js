@@ -2,7 +2,7 @@ module.exports = {
 	params: {},
 	async handler(context) {
 		try {
-			const { params } = context.params;
+			const { params } = context;
 			const memorials = await this.adapter.find({});
 			return Promise.resolve(memorials);
 		} catch (error) {

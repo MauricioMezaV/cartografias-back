@@ -1,9 +1,11 @@
 module.exports = {
-	params: {},
+	params: {
+		id: { type: "string" },
+	},
 	async handler(context) {
 		try {
-			const { params } = context.params;
-			const memorials = await this.adapter.find({});
+			const { id } = context.params;
+			const memorials = await this.adapter.findById(id);
 			return Promise.resolve(memorials);
 		} catch (error) {
 			console.log("error", error);

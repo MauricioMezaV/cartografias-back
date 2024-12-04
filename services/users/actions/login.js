@@ -11,7 +11,7 @@ module.exports = {
 			return Promise.reject("El usuario no existe");
 		}
 
-		if(!user.confirmed) {
+		if (!user.confirmed) {
 			return Promise.reject("El usuario no está confirmado");
 		}
 
@@ -22,5 +22,5 @@ module.exports = {
 		}
 
 		return Promise.resolve(user);
-	}
-}
+	},
+};

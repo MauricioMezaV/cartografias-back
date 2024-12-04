@@ -30,14 +30,13 @@ module.exports = {
 			// Configures the Access-Control-Allow-Credentials CORS header.
 			credentials: true,
 			// Configures the Access-Control-Max-Age CORS header.
-			maxAge: 3600
+			maxAge: 3600,
 		},
 		routes: [
 			{
 				mappingPolicy: "restrict",
 
 				whitelist: [
-
 					// USERS
 					"v1.users.list",
 					"v1.users.create",
@@ -65,16 +64,16 @@ module.exports = {
 					"v1.places.update",
 					"v1.places.remove",
 
+					//VICTIMS
+					"v1.victims.list",
+					"v1.victims.get",
+					"v1.victims.create",
+					"v1.victims.update",
+					"v1.victims.remove",
+
 					// GREETER
 					"v1.greeter.hello",
 					"v1.greeter.welcome",
-
-					// PRODUCTS
-					"v1.products.list",
-					"v1.products.create",
-					"v1.products.get",
-					"v1.products.update",
-					"v1.products.remove",
 				],
 				aliases: {
 					// USERS
@@ -89,33 +88,37 @@ module.exports = {
 					"GET /users/me": "v1.users.me",
 					"POST /users/newPassword/:token": "v1.users.newPassword",
 					"POST /users/Contact": "v1.users.Contact",
-          
+
 					//MEMORIALS
-					"POST /memorials" : "v1.memorials.create",
-					"REST /memorials": "v1.memorials",
+					"POST /memorials": "v1.memorials.create",
+					"GET /memorials/:id": "v1.memorials.get",
 					"GET /memorials": "v1.memorials.list",
+					"PUT /memorials/:id": "v1.memorials.update",
+					"REST /memorials": "v1.memorials",
 
 					//PLACES
-					"POST /places" : "v1.places.create",
-					"REST /places": "v1.places",					
-          
+					"POST /places": "v1.places.create",
+					"GET /places/:id": "v1.places.get",
+					"GET /places": "v1.places.list",
+					"PUT /places/:id": "v1.places.update",
+					"REST /places": "v1.places",
+
+					//VICTIMS
+					"POST /victims": "v1.places.create",
+					"GET /victims/:id": "v1.victims.get",
+					"GET /victims": "v1.victims.list",
+					"PUT /victims/:id": "v1.victims.update",
+					"REST /victims": "v1.victims",
+
 					// GREETER
 					"GET /greeter/hello": "v1.greeter.hello",
 					"GET /welcome/:name": "v1.greeter.welcome",
-
-					// PRODUCTS
-					"GET /products": "v1.products.list",
-					"POST /products": "v1.products.create",
-					"GET /products/:id": "v1.products.get",
-					"PUT /products/:id": "v1.products.update",
-					"DELETE /products/:id": "v1.products.remove",
-
 				},
-			}
+			},
 		],
 		assets: {
 			folder: "public",
-		}
+		},
 	},
 	methods: {
 		onResponse(req, res, data) {
@@ -133,7 +136,5 @@ module.exports = {
 			// Devolver los datos de la respuesta
 			return data;
 		},
-
-
 	},
 };

@@ -1,8 +1,8 @@
 const bcrypt = require("bcrypt");
-const generateId = require("../methods/generateId")
-const generateJWT = require("../methods/generateJWT")
-const sendEmail = require("../methods/sendEmail")
-const registerSendEmail = require("../methods/registerSendEmail")
+const generateId = require("../methods/generateId");
+const generateJWT = require("../methods/generateJWT");
+const sendEmail = require("../methods/sendEmail");
+const registerSendEmail = require("../methods/registerSendEmail");
 
 function isValidEmail(email) {
 	const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
@@ -14,7 +14,7 @@ module.exports = {
 	async handler(context) {
 		let { name, email, password } = context.params;
 
-		console.log(context.params)
+		console.log(context.params);
 
 		if (!email) {
 			return Promise.reject("El email es obligatorio");
@@ -37,7 +37,9 @@ module.exports = {
 		}
 
 		if (password.length < 8) {
-			return Promise.reject("La contraseña debe tener más de 8 caracteres");
+			return Promise.reject(
+				"La contraseña debe tener más de 8 caracteres",
+			);
 		}
 
 		password = await bcrypt.hash(password, 10);
@@ -48,16 +50,16 @@ module.exports = {
 			password,
 			token: generateId(),
 			authToken: generateJWT(),
-		}
+		};
 
 		await registerSendEmail({
 			email: user.email,
 			nombre: user.name,
 			token: user.token,
-		})
+		});
 
 		await this.adapter.insert(user);
 
 		return Promise.resolve(user);
-	}
-}
+	},
+};
