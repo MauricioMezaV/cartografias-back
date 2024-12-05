@@ -33,10 +33,10 @@
     "moleculer": "^0.14.26",
     "moleculer-db": "^0.8.20",
     "moleculer-db-adapter-mongo": "^0.4.15",
-    "moleculer-db-adapter-mongoose": "^0.8.12",
+    "moleculer-db-adapter-mongoose": "^0.9.6",
     "moleculer-web": "^0.10.4",
     "mongodb": "^6.9.0",
-    "mongoose": "^5.8.4",
+    "mongoose": "^8.8.3",
     "nats": "^2.7.1",
     "nodemailer": "^6.9.6",
     "services-db-mixin": "^2.3.2"

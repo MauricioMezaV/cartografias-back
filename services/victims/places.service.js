@@ -24,8 +24,6 @@ module.exports = {
 			socketTimeoutMS: process.env.MAX_ACTION_TIMEOUT,
 			useNewUrlParser: true,
 			useUnifiedTopology: true,
-			useCreateIndex: true,
-			useFindAndModify: false,
 		},
 	),
 	model,
