@@ -36,7 +36,7 @@
     "moleculer-db-adapter-mongoose": "^0.9.6",
     "moleculer-web": "^0.10.4",
     "mongodb": "^6.9.0",
-    "mongoose": "^8.8.3",
+    "mongoose": "^6.13.5",
     "nats": "^2.7.1",
     "nodemailer": "^6.9.6",
     "services-db-mixin": "^2.3.2"
