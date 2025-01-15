@@ -6,9 +6,19 @@ module.exports = {
 		provincia: { type: "string", optional: false },
 		coordinates: {
 			type: "array",
-			optional: false,
+			optional: true,
 			items: "number",
 			length: 2,
+		},
+		victims: {
+			type: "array",
+			optional: true,
+			items: "string",
+		},
+		perpetrators: {
+			type: "array",
+			optional: true,
+			items: "string",
 		},
 	},
 	async handler(context) {

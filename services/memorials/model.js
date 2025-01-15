@@ -11,7 +11,7 @@ const memorialsSchema = new mongoose.Schema({
 		required: true,
 		validate: {
 			validator: function (v) {
-				return v.length === 2;
+				return v.length === 2 || v.length === 0;
 			},
 			message: (props) => `${props.value} no es una coordenada válida`,
 		},

@@ -7,7 +7,9 @@ module.exports = {
 		"address",
 		"comuna",
 		"provincia",
-		"coordinates"
+		"coordinates",
+		"victims",
+		"perpetrators"
 	],
 
 	/*

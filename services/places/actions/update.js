@@ -10,6 +10,16 @@ module.exports = {
 			items: "number",
 			length: 2,
 		},
+		victims: {
+			type: "array",
+			optional: true,
+			items: "string",
+		},
+		perpetrators: {
+			type: "array",
+			optional: true,
+			items: "string",
+		},
 	},
 	async handler(context) {
 		try {
