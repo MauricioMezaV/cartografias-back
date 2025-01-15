@@ -3,8 +3,8 @@ module.exports = {
 	async handler(context) {
 		try {
 			const { params } = context;
-			const memorials = await this.adapter.find({});
-			return Promise.resolve(memorials);
+			const places = await this.adapter.find({});
+			return Promise.resolve(places);
 		} catch (error) {
 			console.log("error", error);
 			return Promise.reject(error);

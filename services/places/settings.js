@@ -3,12 +3,11 @@ module.exports = {
 	 * Public fields
 	 */
 	fields: [
-		"_id",
-		"title",
-		"authors",
-		"abstract",
-		"publicationDate",
-        "publicationLink"
+		"message",
+		"address",
+		"comuna",
+		"provincia",
+		"coordinates"
 	],
 
 	/*

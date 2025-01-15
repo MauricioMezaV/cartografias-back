@@ -1,37 +1,22 @@
 const mongoose = require("mongoose");
 
-const schema = new mongoose.Schema(
-	{
-		title: {
-			type: String,
-			required: true,
-		},
-		authors: [
-			{
-				name: {
-					type: String,
-					required: true,
-				},
+const placesSchema = new mongoose.Schema({
+	message: { type: String, required: true },
+	address: { type: String, required: true },
+	comuna: { type: String, required: true },
+	provincia: { type: String, required: true },
+	coordinates: {
+		type: [Number],
+		required: true,
+		validate: {
+			validator: function (v) {
+				return v.length === 2;
 			},
-		],
-		abstract: {
-			type: String,
-			required: true,
-		},
-		publicationDate: {
-			type: Date,
-			required: true,
-		},
-		publicationLink: {
-			type: String,
-			required: true,
+			message: (props) => `${props.value} no es una coordenada válida`,
 		},
 	},
-	{
-		timestamps: true,
-	},
-);
+});
 
-const model = mongoose.model("places", schema);
+const Places = mongoose.model("Places", placesSchema);
 
-module.exports = model;
+module.exports = Places;

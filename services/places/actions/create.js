@@ -1,30 +1,21 @@
 module.exports = {
 	params: {
-		title: { type: "string", required: true, min: 1, max: 200 },
-		authors: {
+		message: { type: "string", optional: false, min: 1, max: 500 },
+		address: { type: "string", optional: false },
+		comuna: { type: "string", optional: false },
+		provincia: { type: "string", optional: false },
+		coordinates: {
 			type: "array",
-			required: true,
-			items: {
-				type: "object",
-				props: {
-					name: { type: "string", required: true, min: 1, max: 100 },
-				},
-			},
-			min: 1,
-		},
-		abstract: { type: "string", required: true, min: 1, max: 1000 },
-		publicationDate: { type: "date", required: true },
-		publicationLink: {
-			type: "string",
-			required: true,
-			pattern: /^https?:\/\/.+$/,
+			optional: false,
+			items: "number",
+			length: 2,
 		},
 	},
 	async handler(context) {
 		try {
 			const { params } = context;
-			const memorials = await this.adapter.insert(params);
-			return Promise.resolve(memorials);
+			const places = await this.adapter.insert(params);
+			return Promise.resolve(places);
 		} catch (error) {
 			console.log("error", error);
 			return Promise.reject(error);
