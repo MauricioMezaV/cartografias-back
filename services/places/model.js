@@ -15,18 +15,14 @@ const placesSchema = new mongoose.Schema({
 			message: (props) => `${props.value} no es una coordenada válida`,
 		},
 	},
-	victims: [
-        {
-            name: {type: String, 
-                required: false}
-        }
-    ],
-	perpetrators: [
-        {
-            name: {type: String, 
-                required: false}
-        }
-    ],
+	victims: {
+		type: [String],
+		required: false
+	},
+	perpetrators: {
+		type: [String],
+		required: false
+	},
 });
 
 const Places = mongoose.model("Places", placesSchema);
