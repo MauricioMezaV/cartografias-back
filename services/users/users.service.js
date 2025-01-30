@@ -31,7 +31,7 @@ module.exports = {
 
 	mixins: [DbService],
 	adapter: new MongooseAdapter(
-		"mongodb+srv://mmezav:ULYnoKWTxI3qQakZ@cluster0.ff3uf.mongodb.net/cartografias?retryWrites=true&w=majority&appName=Cluster0",
+		"mongodb+srv://mmezav:ARWoLoQLn5PtN63k@cluster0.ff3uf.mongodb.net/cartografias?retryWrites=true&w=majority&appName=Cluster0",
 		{
 			socketTimeoutMS: process.env.MAX_ACTION_TIMEOUT,
 			useNewUrlParser: true,

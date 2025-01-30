@@ -7,13 +7,14 @@ const MongooseAdapter = require("moleculer-db-adapter-mongoose");
 const settings = require("./settings");
 const model = require("./model");
 
-//ACTIONS
+//Actions
 const create = require("./actions/create");
 const update = require("./actions/update");
 const get = require("./actions/get");
 const list = require("./actions/list");
+
 module.exports = {
-	name: "places",
+	name: "victims",
 	version: 1,
 
 	mixins: [DbService],
@@ -37,20 +38,6 @@ module.exports = {
 	 */
 	dependencies: [],
 
-	hooks: {
-		before: {
-			updateById: [
-				async function (ctx) {
-					if (!ctx.meta.user || ctx.meta.user.role !== "admin") {
-						throw new Error(
-							"Solo los administradores pueden actualizar memoriales",
-						);
-					}
-				},
-			],
-		},
-	},
-
 	/**
 	 * Actions
 	 */
@@ -60,6 +47,8 @@ module.exports = {
 		get,
 		update,
 	},
+
+	hooks: {},
 
 	/**
 	 * Events
