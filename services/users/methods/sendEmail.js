@@ -7,7 +7,7 @@ const sendEmail = async (datos) => {
 		host: "smtp.gmail.com",
 		port: 587,
 		auth: {
-			user: "mauriciomv.cdp@gmail.com",
+			user: "mauriciomv.cdp@gmail.com", // E
 			pass: "exefidwaeosppnwi",
 		},
 	});
@@ -29,9 +29,9 @@ const sendEmail = async (datos) => {
 				<h1 style="color: #333;">¡Hola!</h1>
 				<p style="color: #555;">Has solicitado restablecer tu contraseña.</p>
 				<p style="color: #555;">Sigue el siguiente enlace para generar una nueva contraseña:</p>
-				<a href="https://hpc-uoh.vercel.app/nueva-contrasena/${token}" style="display: inline-block; padding: 10px 20px; background-color: #007BFF; color: #fff; text-decoration: none; border-radius: 5px; margin-top: 20px;">Restablecer Contraseña</a>
-			</div>
-		</body>`,
+				<a href="LINK${token}" style="display: inline-block; padding: 10px 20px; background-color: #007BFF; color: #fff; text-decoration: none; border-radius: 5px; margin-top: 20px;">Restablecer Contraseña</a>
+			</div> 
+		</body>`, // HAY QUE MODIFICAR EL LINK
 	});
 };
 

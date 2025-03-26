@@ -5,16 +5,12 @@ const placesSchema = new mongoose.Schema({
 	address: { type: String, required: true },
 	comuna: { type: String, required: true },
 	provincia: { type: String, required: true },
-	coordinates: {
-		type: [Number],
-		required: true,
-		validate: {
-			validator: function (v) {
-				return v.length === 2 || v.length === 0;
-			},
-			message: (props) => `${props.value} no es una coordenada válida`,
-		},
-	},
+    coordinates: [
+        {
+            coord: {type: Number, 
+                required: true}
+        }
+    ],
 	victims: {
 		type: [String],
 		required: false

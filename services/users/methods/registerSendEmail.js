@@ -27,7 +27,7 @@ const registerSendEmail = async (datos) => {
 				<h1 style="color: #333;">¡Hola, ${nombre}!</h1>
 				<p style="color: #555;">Te damos la bienvenida a Cartografías.</p>
 				<p style="color: #555;">Para activar tu cuenta, haz clic en el siguiente botón:</p>
-				<a href="http://localhost:5173/confirmar-cuenta/${token}" style="display: inline-block; padding: 10px 20px; background-color: #007BFF; color: #fff; text-decoration: none; border-radius: 5px; margin-top: 20px;">Confirmar cuenta</a>
+				<a href="LINK${token}" style="display: inline-block; padding: 10px 20px; background-color: #007BFF; color: #fff; text-decoration: none; border-radius: 5px; margin-top: 20px;">Confirmar cuenta</a>
 			</div>
 		</body>`,
 	});

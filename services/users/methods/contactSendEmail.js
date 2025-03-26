@@ -7,14 +7,14 @@ const contactSendEmail = async (datos) => {
 		host: "smtp.gmail.com",
 		port: 587,
 		auth: {
-			user: "mauriciomv.cdp@gmail.com",
+			user: "mauriciomv.cdp@gmail.com", //MODIFICAR CORREO Y PASS DE CORREO QUE SERVIRÁ PARA ENVÍO
 			pass: "exefidwaeosppnwi",
 		},
 	});
 
 	const info = await transport.sendMail({
 		from: '"Cartografías - Contacto"',
-		to: "rodrigo.llancao@pregrado.uoh.cl",
+		to: "rodrigo.llancao@pregrado.uoh.cl", //MODIFICAR CORREO AL QUE LLEGARÁN LOS MAILS
 		subject:
 			"Has recibido un nuevo formulario desde el contacto Cartografías",
 		text: "Comprueba tu cuenta en UpTask",

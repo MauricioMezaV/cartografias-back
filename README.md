@@ -1,6 +1,19 @@
 [![Moleculer](https://badgen.net/badge/Powered%20by/Moleculer/0e83cd)](https://moleculer.services)
 
-# hpc-backend
+# Proyecto Cartografías de la Memoria Ohiggins (back end)
+
+## Tecnologías
+
+* Se está utilizando principalmente moleculer para la creación de los servicios
+* nodemailer para el envío de correos automatizados
+
+## Qué queda por hacer
+
+* Crear correctamente los modelos y actions para victimas
+* Añadir imágenes a cada elemento que lo necesite a través de Firebase
+
+-----------------------------
+
 This is a [Moleculer](https://moleculer.services/)-based microservices project. Generated with the [Moleculer CLI](https://moleculer.services/docs/0.14/moleculer-cli.html).
 
 ## Usage
